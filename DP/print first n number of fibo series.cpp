@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int array[20];          ///dppppppppppppppppppp
+int arr[20];          ///dppppppppppppppppppp
 
 int fib(int n)
 {   int res;
     if(n==0 || n==1){ return 1;}
-    else if(array[n]==0) {array[n]=fib(n-1)+fib(n-2);}  ///else dilew hoi na dilew hoi
+    else if(arr[n]==0) {arr[n]=fib(n-1)+fib(n-2);}  ///else dilew hoi na dilew hoi
 
-    return array[n];
+    return arr[n];
 }
 
 int main()
