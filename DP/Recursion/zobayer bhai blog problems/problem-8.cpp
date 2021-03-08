@@ -3,17 +3,19 @@ Write a recursive program to determine whether a given integer is prime or not.
 */
 #include<bits/stdc++.h>
 using namespace std;
-int isPrime(int i,int n,int limit,flag)
+int isPrime(int i,int n,int limit)
 {
-    if(i>limit) return flag;
-
+    if(n<2) return 0;
+    if(i>limit) return 1;
+    if(n%i==0) return 0;
+    return isPrime(i+1,n,limit);
 }
 int main()
 {
     int n;
-    while(scanf("%d", &n)==1)
+    while(cin>>n)
     {
-        if(isPrime(2,n,sqrt(n),0)==1) cout<<"prime"<<endl;
+        if(isPrime(2,n,sqrt(n))==1) cout<<"prime"<<endl;
         else cout<<"not prime"<<endl;
     }
     return 0;
